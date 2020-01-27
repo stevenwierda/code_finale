@@ -1,0 +1,66 @@
+Installation:
+    Download the code and put it on 'thomke' or 'romke' and setup your pycharm enviroment for remote debugging.
+    create conda environment
+    install os, cv2, tqdm, matplotlib, torch, tensorboardX, pillow
+
+how to setup the training:
+    select the network you want to use. If you use DeepLabV3+ make sure to specify the correct backbone.
+    select the right learning rate, sample size and amount.
+    select tile or classic subsample mode. (tile creates crops that give balanced data and classic makes random crops.
+    specify the dataset you want to use. A couple of datasets are saved in the dataset folder.
+    specify the correct route to the data. --dataset should be set on the main data folder.
+    --imgs should lead tho the correct folder map. --labels should direct to the groundtruth folder.
+    the img and label are takeing --dataset as base folder.
+
+    put for hyper-hues 222 channels in and for the other preprocessing methodes 224.
+
+    put in the correct amount of classes in.
+    put the correct colour classes in the functions file (in th utils)
+
+    you can put in a costume save name in the save directory or let it automaticly count up
+    there is a bug where it will stop at 10.
+
+    press run
+
+    the results can be viewed on tensorboard.
+
+How to run the preprocessing
+    open the preprocess.txt.
+    put on the first line the camara that is used.
+    select in the convert_hsi2npy file the correct directorys
+    press run
+
+how to do the prediction
+    select which option you want to use (at the bottom). (detect damage gives the surtanty per class and output
+    put a the name of the image that you want on predict in the pred.txt
+    put the name in of the model in line 138 or 165
+    put an name for the output file
+    put the network name in the config parameters
+    press run
+
+some examples of different colour list
+
+    building dataset
+        def get_labels():
+        return np.asarray([[0, 0, 0],         # 0 bg
+                         [255, 0, 255],     # 1 door
+                         [255,0,0],         # 2 blind
+                         [0, 255, 0],       # 3 windowframes
+                         [0, 0, 255],       # 4 wall
+                         [125,0,125],       # 5 drainpipe
+                         [0,255,255],       # 6 windowborder
+                         [255,255,0],       # 7 chimney
+                         [0,125,125],       # 8 material
+                         [125,0,0],         # 9 rooftop
+                         [125, 125, 125]   # 10 fent
+                           ]
+                        )
+
+    paints dataset
+       def get_labels():
+    return np.asarray([[0, 0, 0],         # 0 bg
+                       [0,0,255],         # 1 wijzenol
+                       [0,255,0],         # 2 sigma
+                       [255,0,0],         # 3 sikkens
+                       [255,255,0]]       # 4 trimetal
+                        )

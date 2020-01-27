@@ -1,0 +1,116 @@
+{
+  "datapath": "/media/public_data/aeroscan/dataset",
+  "camera": ["FX10/","FX17/"],
+  "classification":
+  {
+    "wood":{
+      "classes":
+      [
+        "BG",
+        "1",
+        "2",
+        "3"
+      ],
+      "pixel_values":[
+        [0,0,0],
+        [,,],
+        [,,],
+        [,,]
+      ]
+    },
+
+    "paint":{
+      "classes": [
+        "BG",
+        "sigma_s2u_allure_9001",
+        "sikkens_XD_high_gloss_9001",
+        "trimetal_permaline_silicon_9001",
+        "wyzonol 9001"
+      ],
+      "pixel_values": [
+        [0,0,0],
+        [255,0,0],
+        [0,255,0],
+        [255,255,0],
+        [0,0,255]
+      ]
+    }
+  },
+  "dataset":
+  {
+    "FX10":
+    {
+      "wood": {
+        "1":
+        {
+          "classes": ["BG", "1"],
+          "data":
+          [
+            {
+              "raw": "Data-set_paint_9001_on_wood1_2019-11-07_09-28-33",
+              "npy": "Data-set_paint_9001_on_wood1_2019-11-07_09-28-33.npy",
+              "mask": "Data-set_paint_9001_on_wood1_2019-11-07_09-28-33.png"
+            },
+            {
+              "raw":"Data-set_paint_9001_on_wood1_2019-11-07_09-51-29",
+              "npy":"Data-set_paint_9001_on_wood1_2019-11-07_09-51-29.npy",
+              "mask":"Data-set_paint_9001_on_wood1_2019-11-07_09-51-29.png"
+            },
+            {
+              "raw": "Data-set_paint_9001_on_wood1_2019-11-07_09-54-14",
+              "npy": "Data-set_paint_9001_on_wood1_2019-11-07_09-54-14.npy",
+              "mask": "Data-set_paint_9001_on_wood1_2019-11-07_09-54-14.png"
+            },
+            {
+              "raw": "Data-set_paint_9001_on_wood1_2019-11-07_10-23-26",
+              "npy": "Data-set_paint_9001_on_wood1_2019-11-07_10-23-26.npy",
+              "mask": "Data-set_paint_9001_on_wood1_2019-11-07_10-23-26.png"
+            }
+          ]
+        },
+        "2":
+        {
+          "classes": ["BG","2"],
+          "data":
+          [
+Data-set_paint_9001_on_wood2_2019-11-07_09-49-45
+Data-set_paint_9001_on_wood2_2019-11-07_10-09-32
+Data-set_paint_9001_on_wood2_2019-11-07_10-15-43,
+            {
+              "raw": "Data-set_paint_9001_on_wood2_2019-11-07_09-30-36",
+              "npy": "Data-set_paint_9001_on_wood2_2019-11-07_09-30-36.npy",
+              "mask": "Data-set_paint_9001_on_wood2_2019-11-07_09-30-36.png"
+            },
+            {
+              "raw": "Data-set_paint_9001_on_wood1_2019-11-07_09-28-33",
+              "npy": "Data-set_paint_9001_on_wood1_2019-11-07_09-28-33.npy",
+              "mask": "Data-set_paint_9001_on_wood1_2019-11-07_09-28-33.png"
+            },{
+              "raw": "Data-set_paint_9001_on_wood1_2019-11-07_09-28-33",
+              "npy": "Data-set_paint_9001_on_wood1_2019-11-07_09-28-33.npy",
+              "mask": "Data-set_paint_9001_on_wood1_2019-11-07_09-28-33.png"
+            },{
+              "raw": "Data-set_paint_9001_on_wood1_2019-11-07_09-28-33",
+              "npy": "Data-set_paint_9001_on_wood1_2019-11-07_09-28-33.npy",
+              "mask": "Data-set_paint_9001_on_wood1_2019-11-07_09-28-33.png"
+            }
+          ]
+        }
+      },
+
+      "paint":
+      {
+
+      }
+    },
+    "FX17":
+    {
+      "wood": {
+
+      },
+      "paint": {
+
+      }
+    }
+  }
+}
